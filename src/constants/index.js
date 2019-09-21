@@ -1,0 +1,21 @@
+const DB_USERNAME = process.env.DB_USERNAME || 'root';
+const DB_PASSWORD = process.env.DB_PASSWORD || '';
+const DB_NAME = process.env.DB_NAME || 'sls-db';
+const DB_HOST = process.env.DB_HOST || 'localhost';
+const DB_DIALECT = process.env.DB_DIALECT || 'mysql';
+const JWT_ACCESS_EXPIRATION = process.env.JWT_ACCESS_EXPIRATION || '300';
+const JWT_REFRESH_EXPIRATION = process.env.JWT_REFRESH_EXPIRATION || '3600';
+const JWT_ACCESS_ENCRYPTION = process.env.JWT_ACCESS_ENCRYPTION || 'JWT_ACCESS_ENCRYPTION_VALUE';
+const JWT_REFRESH_ENCRYPTION = process.env.JWT_REFRESH_ENCRYPTION || 'JWT_REFRESH_ENCRYPTION_VALUE';
+
+module.exports = {
+  DB_USERNAME,
+  DB_PASSWORD,
+  DB_NAME,
+  DB_HOST,
+  DB_DIALECT,
+  JWT_ACCESS_EXPIRATION,
+  JWT_REFRESH_EXPIRATION,
+  JWT_ACCESS_ENCRYPTION,
+  JWT_REFRESH_ENCRYPTION,
+};
