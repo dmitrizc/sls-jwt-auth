@@ -28,6 +28,9 @@ provider:
 #  stage: dev
 #  region: us-east-1
 
+  stage: dev
+  region: us-east-1
+
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
 #    - Effect: "Allow"
@@ -47,6 +50,9 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
+
+  environment:
+    IS_SERVERLESS: true
 
 # you can add packaging information here
 #package:
@@ -144,7 +150,7 @@ functions:
 #       Value: "Some output value"
 
 plugins:
-  - serverless-dotenv
+  - serverless-dotenv-plugin
   - serverless-offline
 
 custom:

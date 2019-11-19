@@ -17,7 +17,7 @@ module.exports.registerHandler = async (event, context) => {
   // Check email in use
   const [errFindDup, existingUser] = await to(User.findOne({ where: { email } }));
   if (errFindDup || existingUser) {
-    console.error(errFindDup);
+    console.error('Email already in use', errFindDup);
     return unprocessableEntry({ email: ['Email already in use'] });
   }
 
@@ -29,7 +29,7 @@ module.exports.registerHandler = async (event, context) => {
     password,
   }));
   if (errSignup || !user) {
-    console.error((errSignup));
+    console.error('Can not create db entry', errSignup);
     return unprocessableEntry(errSignup);
   }
 

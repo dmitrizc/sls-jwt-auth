@@ -1,7 +1,5 @@
 'use strict';
 
-require('dotenv').config();
-
 const { authorizeHandler } = require('./src/handlers/authorize');
 const { loginHandler, refreshHandler } = require('./src/handlers/auth/login');
 const { registerHandler } = require('./src/handlers/auth/register');
